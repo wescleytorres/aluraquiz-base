@@ -1,28 +1,42 @@
 {
   "bg": "https://www.submarinoviagens.com.br/bora-nessa-trip/wp-content/uploads/2019/07/shutterstock_1248764740.jpg",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "title": "NordesteQuiz",
+  "description": "Teste os seus conhecimentos sobre o Nordeste",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://media.giphy.com/media/1GMrkiwNw0OhW/giphy.gif",
+      "title": "Festa originária da Região Nordeste do Brasil?",
       "description": "Essa é pra aquecer",
       "answer": 2,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Baile Funk",
+        "Carnaval",
+        "Forró",
+        "Oktoberfest"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://media.giphy.com/media/fGI7YaAUdqS3mjksNJ/giphy.gif",
+      "title": "Qual nome dos dois cantores no Gif acima?",
+      "description": "Os caba são bom!",
+      "answer": 3,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Bruno e Marrone",
+         "Rick e Renner",
+         "Milhonário e José Rico",
+         "Xande Avião e Wesley Safadão"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/l3q2JSmnH9bUmTUWI/giphy.gif",
+      "title": "Praia do Ceará que se tornou um paraíso para prática de Wind e Kitesurf?",
+      "description": "Os caba são bom!",
+      "answer": 3,
+      "alternatives": [
+         "Ipanema",
+         "Guarujá",
+         "Jericoacora",
+         "Porto de Galinhas"
       ]
     }
   ],

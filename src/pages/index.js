@@ -1,34 +1,18 @@
 import React, { useState } from 'react';
 
-import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import Widget from '../src/components/Widget';
-import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizLogo from '../src/components/QuizLogo';
+import Widget from '../components/Widget';
+import Footer from '../components/Footer';
+import GitHubCorner from '../components/GitHubCorner';
+import QuizBackground from '../components/QuizBackground';
+import QuizLogo from '../components/QuizLogo';
+import Input from '../components/Input';
+import Button from '../components/Button';
+import { QuizContainer } from '../components/QuizContainer';
 
-import db from '../db.json';
-
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `;
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import db from '../../db.json';
 
 const Home = () => {
   const router = useRouter();
@@ -38,12 +22,13 @@ const Home = () => {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Nordestequiz</title>
+        <link rel="icon" href="https://photos.enjoei.com.br/fantasia-cosplay-chapeu-lampiao-cangaceiro-couro/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy81NDAxMDE4LzBjOGY5OTI2NDIwYTY2MDRkMzcxMWRhMjJmZjc5OTNkLmpwZw" />
       </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Quiz sobre o Nordeste</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={(infosDoEvento) => {
@@ -52,18 +37,15 @@ const Home = () => {
               console.log('Fazendo uma submissão por meio do react');
             }}
             >
-              <input
-                onChange={(infosDoEvento) => {
-                  console.log(infosDoEvento.target.value);
-                  // State
-                  // name = infosDoEvento.target.value;
-                  setName(infosDoEvento.target.value);
-                }}
+              <Input
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
                 placeholder="Diz ai seu nome"
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={name.length === 0}>
                 Jogar
-              </button>
+              </Button>
             </form>
           </Widget.Content>
 
